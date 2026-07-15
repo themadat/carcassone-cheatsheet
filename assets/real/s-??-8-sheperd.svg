@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="620"
+     height="634"
+     viewBox="0 0 620 634"
+     role="img"
+     aria-label="Sharpened blue asymmetrical silhouette">
+  <path
+    fill="#1479BC"
+    d="
+      M 91 51
+      Q 80 58 80 73
+      L 104 523
+      L 257 523
+      L 272 493
+      L 272 472
+      L 368 472
+      L 368 493
+      L 387 523
+      L 523 523
+      L 497 433
+      L 476 391
+      L 476 327
+      L 522 295
+      L 539 274
+      L 524 253
+      L 405 236
+      L 384 119
+      Q 380 99 361 91
+      L 316 91
+      Q 292 96 286 118
+      L 265 226
+      L 223 226
+      L 184 59
+      Q 180 46 165 46
+      Z
+    "/>
+</svg>

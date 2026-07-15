@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="552"
+     height="856"
+     viewBox="0 0 552 856"
+     role="img"
+     aria-label="Sharpened blue tapered tower silhouette">
+  <path
+    fill="#1479BC"
+    d="
+      M 269 49
+      Q 276 42 283 49
+      L 331 372
+      L 403 372
+      Q 423 372 434 389
+      L 458 421
+      L 434 450
+      Q 423 463 405 463
+      L 379 463
+      L 430 786
+      L 122 786
+      L 173 463
+      L 147 463
+      Q 129 463 118 450
+      L 94 421
+      L 118 389
+      Q 129 372 149 372
+      L 221 372
+      Z
+    "/>
+</svg>

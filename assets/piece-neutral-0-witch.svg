@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="358"
+     height="488"
+     viewBox="0 0 358 488"
+     role="img"
+     aria-label="Sharpened blue tapered silhouette">
+  <path
+    fill="#1479BC"
+    d="
+      M 166 42
+      Q 179 31 192 42
+      L 225 211
+      L 281 211
+      Q 296 211 305 223
+      L 316 239
+      L 305 255
+      Q 296 267 281 267
+      L 257 267
+      L 309 414
+      L 49 414
+      L 101 267
+      L 77 267
+      Q 62 267 53 255
+      L 42 239
+      L 53 223
+      Q 62 211 77 211
+      L 133 211
+      Z
+    "/>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="80"
+     height="80"
+     viewBox="0 0 80 80">
+  <path d="M 17 8 L 15 10 L 15 11 L 14 12 L 14 14 L 13 15 L 13 30 L 14 31 L 14 38 L 15 39 L 15 48 L 16 49 L 16 53 L 15 54 L 15 58 L 61 58 L 62 59 L 62 61 L 61 62 L 60 61 L 25 61 L 24 60 L 0 60 L 0 64 L 1 65 L 1 66 L 4 69 L 6 69 L 7 70 L 68 70 L 70 68 L 70 67 L 71 66 L 71 64 L 72 63 L 72 61 L 73 60 L 73 43 L 72 42 L 72 35 L 71 34 L 71 22 L 70 21 L 70 18 L 71 17 L 72 18 L 72 19 L 77 19 L 79 17 L 79 10 L 77 8 Z M 60 67 L 61 66 L 62 67 L 61 68 Z M 72 12 L 73 13 L 73 15 L 72 16 L 71 15 L 71 13 Z M 72 11 L 73 10 L 74 11 L 73 12 Z"
+        fill="#000000"
+        fill-rule="evenodd"/>
+</svg>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="702"
+     height="414"
+     viewBox="0 0 702 414"
+     role="img"
+     aria-label="Sharpened blue animal silhouette">
+  <path
+    fill="#1479BC"
+    d="
+      M 55 137
+      Q 61 106 84 85
+      Q 121 51 184 43
+      Q 266 32 342 47
+      Q 388 56 430 74
+      L 505 74
+      Q 525 74 533 91
+      L 543 115
+      L 615 115
+      Q 637 115 645 135
+      L 645 220
+      Q 637 242 615 242
+      L 555 242
+      Q 527 242 505 260
+      L 448 302
+      L 448 340
+      L 377 340
+      L 365 302
+      L 238 302
+      L 226 340
+      L 155 340
+      L 147 304
+      Q 114 288 91 265
+      Q 61 235 53 199
+      Q 47 169 55 137
+      Z
+    "/>
+</svg>

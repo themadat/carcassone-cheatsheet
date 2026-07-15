@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="696"
+     height="348"
+     viewBox="0 0 696 348"
+     role="img"
+     aria-label="Sharpened blue rounded platform silhouette">
+  <path
+    fill="#1479BC"
+    d="
+      M 78 57
+      Q 67 57 61 68
+      L 61 218
+      Q 61 230 73 230
+      L 93 230
+      L 111 282
+      Q 118 305 141 305
+      L 193 305
+      Q 218 305 226 282
+      L 243 231
+      L 415 231
+      L 432 282
+      Q 440 305 465 305
+      L 517 305
+      Q 540 305 547 282
+      L 565 230
+      L 587 230
+      Q 599 230 599 218
+      L 599 68
+      Q 593 57 582 57
+      Z
+    "/>
+</svg>

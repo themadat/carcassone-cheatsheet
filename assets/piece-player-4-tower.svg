@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="616"
+     height="418"
+     viewBox="0 0 616 418"
+     role="img"
+     aria-label="Sharpened blue notched banner silhouette">
+  <path
+    fill="#1479BC"
+    d="
+      M 73 127
+      Q 62 127 57 138
+      L 57 321
+      Q 57 334 70 334
+      L 240 334
+      L 300 272
+      L 360 334
+      L 531 334
+      Q 544 334 544 321
+      L 544 138
+      Q 539 127 528 127
+      L 347 127
+      L 347 110
+      L 320 78
+      Q 300 56 281 78
+      L 254 110
+      L 254 127
+      Z
+    "/>
+</svg>

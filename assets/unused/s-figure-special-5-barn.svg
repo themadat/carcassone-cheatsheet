@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="656"
+     height="446"
+     viewBox="0 0 656 446"
+     role="img"
+     aria-label="Sharpened blue arched silhouette">
+  <path
+    fill="#1479BC"
+    d="
+      M 78 196
+      L 292 42
+      Q 328 19 364 42
+      L 578 196
+      L 578 402
+      L 449 402
+      L 449 326
+      Q 449 312 435 312
+      L 411 312
+      Q 397 312 397 326
+      L 397 402
+      L 273 402
+      L 273 326
+      Q 273 312 259 312
+      L 235 312
+      Q 221 312 221 326
+      L 221 402
+      L 78 402
+      Z
+    "/>
+</svg>
