@@ -97,10 +97,10 @@
       position: relative;
       z-index: 21;
       height: 4.45cqw;
-      display: flex;
+      display: grid;
       align-items: center;
-      gap: .7cqw;
-      padding: .34cqw 1cqw;
+      gap: .42cqw;
+      padding: .28cqw .85cqw;
       color: #fff8e7;
       background:
         linear-gradient(90deg, rgba(255,255,255,.04), transparent 35%, rgba(0,0,0,.08) 72%, transparent),
@@ -108,16 +108,15 @@
       border-top: .22cqw solid #8d6d47;
       border-bottom: .25cqw solid #8a6740;
       box-shadow: 0 .15cqw 0 rgba(61,38,18,.65), inset 0 .14cqw 0 rgba(255,255,255,.14);
-      font-size: var(--type-note);
-      line-height: 1;
-      white-space: nowrap;
+      font-size: 1.32cqw;
+      line-height: .95;
     }
-    .expansion-filter-bar.main-filters { justify-content: space-between; }
-    .expansion-filter-bar.mini-filters { justify-content: space-between; margin: -.22cqw -.22cqw 0; }
+    .expansion-filter-bar.main-filters { grid-template-columns: max-content repeat(7, minmax(0, 1fr)); }
+    .expansion-filter-bar.mini-filters { grid-template-columns: max-content repeat(9, minmax(0, 1fr)); }
     .filter-kind {
       flex: 0 0 auto;
       color: #ead3a8;
-      font-size: var(--type-title);
+      font-size: var(--type-action);
       font-weight: 700;
       letter-spacing: .04em;
       text-transform: uppercase;
@@ -130,6 +129,12 @@
       gap: .25cqw;
       cursor: pointer;
       font-weight: 700;
+      text-align: center;
+      white-space: normal;
+    }
+    .expansion-filter-bar label > span {
+      display: block;
+      min-width: 0;
     }
     .expansion-filter-bar input {
       width: 1.35cqw;
@@ -168,7 +173,7 @@
     .flourish::before { content: "❧ ︵ ❧ ︵ ❧"; }
 
     .figures {
-      height: 14.8cqw;
+      height: 19.25cqw;
       margin: .55cqw .8cqw 1.15cqw;
       border: .22cqw solid var(--line);
       border-top: 0;
@@ -176,7 +181,7 @@
     }
 
     .figure-body {
-      height: calc(100% - 7.25cqw);
+      height: calc(100% - 11.7cqw);
       padding: .15cqw .65cqw;
       display: grid;
       grid-template-columns: 1.35fr 1.35fr 2.15fr 1.25fr;
@@ -393,7 +398,7 @@
 
     .turns {
       margin: 0 .8cqw;
-      height: 116.7cqw;
+      height: 112.25cqw;
       border: .22cqw solid var(--line);
       box-shadow: inset .13cqw 0 rgba(255,255,255,.5);
     }
@@ -1608,13 +1613,25 @@
     <section class="figures">
       <div class="expansion-filter-bar main-filters" role="group" aria-label="Main expansions">
         <span class="filter-kind">Main</span>
-        <label><input type="checkbox" data-expansion-toggle="ic" checked>1 Inns &amp; Cathedrals</label>
-        <label><input type="checkbox" data-expansion-toggle="tb" checked>2 Traders &amp; Builders</label>
-        <label><input type="checkbox" data-expansion-toggle="pd" checked>3 Princess &amp; Dragon</label>
-        <label><input type="checkbox" data-expansion-toggle="tower" checked>4 Tower</label>
-        <label><input type="checkbox" data-expansion-toggle="am" checked>5 Abbey &amp; Mayor</label>
-        <label><input type="checkbox" data-expansion-toggle="ckr" checked>6 Count, King &amp; Robber</label>
-        <label><input type="checkbox" data-expansion-toggle="bcb" checked>7 Bridges, Castles &amp; Bazaars</label>
+        <label><input type="checkbox" data-expansion-toggle="ic" checked><span>Inns &amp;<br>Cathedrals</span></label>
+        <label><input type="checkbox" data-expansion-toggle="tb" checked><span>Traders &amp;<br>Builders</span></label>
+        <label><input type="checkbox" data-expansion-toggle="pd" checked><span>Princess &amp;<br>Dragon</span></label>
+        <label><input type="checkbox" data-expansion-toggle="tower" checked><span>Tower</span></label>
+        <label><input type="checkbox" data-expansion-toggle="am" checked><span>Abbey &amp;<br>Mayor</span></label>
+        <label><input type="checkbox" data-expansion-toggle="ckr" checked><span>Count, King<br>&amp; Robber</span></label>
+        <label><input type="checkbox" data-expansion-toggle="bcb" checked><span>Bridges, Castles<br>&amp; Bazaars</span></label>
+      </div>
+      <div class="expansion-filter-bar mini-filters" role="group" aria-label="Mini expansions">
+        <span class="filter-kind">Mini</span>
+        <label><input type="checkbox" data-expansion-toggle="abbot" checked><span>Abbot</span></label>
+        <label><input type="checkbox" data-expansion-toggle="river2" checked><span>River II</span></label>
+        <label><input type="checkbox" data-expansion-toggle="ferries" checked><span>Ferries</span></label>
+        <label><input type="checkbox" data-expansion-toggle="gold" checked><span>Gold<br>Mines</span></label>
+        <label><input type="checkbox" data-expansion-toggle="magewitch" checked><span>Mage &amp;<br>Witch</span></label>
+        <label><input type="checkbox" data-expansion-toggle="robbers" checked><span>Robbers</span></label>
+        <label><input type="checkbox" data-expansion-toggle="flying" checked><span>Flying<br>Machines</span></label>
+        <label><input type="checkbox" data-expansion-toggle="messengers" checked><span>Messengers</span></label>
+        <label><input type="checkbox" data-expansion-toggle="cropcircles" checked><span>Crop<br>Circles</span></label>
       </div>
       <div class="figure-body">
         <div class="figure-row">
@@ -1666,19 +1683,6 @@
     </section>
 
     <section class="turns">
-      <div class="expansion-filter-bar mini-filters" role="group" aria-label="Mini expansions">
-        <span class="filter-kind">Mini</span>
-        <label><input type="checkbox" data-expansion-toggle="abbot" checked>Abbot</label>
-        <label><input type="checkbox" data-expansion-toggle="river2" checked>River II</label>
-        <label><input type="checkbox" data-expansion-toggle="ferries" checked>Ferries</label>
-        <label><input type="checkbox" data-expansion-toggle="gold" checked>Gold Mines</label>
-        <label><input type="checkbox" data-expansion-toggle="magewitch" checked>Mage &amp; Witch</label>
-        <label><input type="checkbox" data-expansion-toggle="robbers" checked>Robbers</label>
-        <label><input type="checkbox" data-expansion-toggle="flying" checked>Flying Machines</label>
-        <label><input type="checkbox" data-expansion-toggle="messengers" checked>Messengers</label>
-        <label><input type="checkbox" data-expansion-toggle="cropcircles" checked>Crop Circles</label>
-      </div>
-
       <section class="phase phase-one">
         <h2>1. Place a Tile or Abbey</h2>
         <div class="direction-key" aria-label="Direction key: adjacent means all eight surrounding tiles; orthogonal means the four edge-sharing tiles; diagonal means the four corner-sharing tiles">
