@@ -111,7 +111,7 @@
       font-size: 1.32cqw;
       line-height: .95;
     }
-    .expansion-filter-bar.main-filters { grid-template-columns: max-content repeat(7, minmax(0, 1fr)); }
+    .expansion-filter-bar.main-filters { grid-template-columns: max-content repeat(8, minmax(0, 1fr)); }
     .expansion-filter-bar.mini-filters { grid-template-columns: max-content repeat(9, minmax(0, 1fr)); }
     .filter-kind {
       flex: 0 0 auto;
@@ -259,6 +259,11 @@
       background: radial-gradient(circle closest-side, rgba(94, 132, 65, .34) 0 88%, rgba(94, 132, 65, .18) 89% 96%, transparent 97%);
     }
     .piece.count { color: #6d3f7d; }
+    .piece.shepherd { color: var(--red); }
+    .piece.sheep { color: #d6c77f; }
+    .piece.wolf { color: #56575c; }
+    .piece.hill { color: #6b8b39; }
+    .piece.vineyard { color: #7b4d88; }
     .piece.king-marker { color: #bd8e1f; }
     .piece.road-robber-marker { color: #5b3823; }
     .piece.shrine { color: #75797b; }
@@ -300,15 +305,18 @@
     .figure-body .physical-robber { --legend-w: 2.7cqw; --legend-h: 3.45cqw; }
     .figure-body .physical-messenger { --legend-w: 2.7cqw; --legend-h: 3cqw; --legend-y: -.133cqw; }
     .figure-body .physical-barn { --legend-w: 4.5cqw; --legend-h: 3.6cqw; --legend-y: -.133cqw; }
+    .figure-body .physical-shepherd { --legend-w: 3.15cqw; --legend-h: 4cqw; }
 
-    .figure-body .physical-mage { --legend-w: 2.7cqw; --legend-h: 5.2cqw; --legend-y: .6cqw; }
-    .figure-body .physical-witch { --legend-w: 2.5cqw; --legend-h: 3.7cqw; --legend-y: .433cqw; }
-    .figure-body .physical-dragon { --legend-w: 9cqw; --legend-h: 4.7cqw; --legend-y: .2cqw; }
-    .figure-body .physical-fairy { --legend-w: 2.45cqw; --legend-h: 3.4cqw; --legend-y: .2cqw; }
-    .figure-body .physical-count { --legend-w: 3.5cqw; --legend-h: 5.4cqw; --legend-y: .2cqw; }
+    .figure-body .physical-mage { --legend-w: 2.5cqw; --legend-h: 4.8cqw; --legend-y: .6cqw; }
+    .figure-body .physical-witch { --legend-w: 2.3cqw; --legend-h: 3.5cqw; --legend-y: .433cqw; }
+    .figure-body .physical-dragon { --legend-w: 8.2cqw; --legend-h: 4.35cqw; --legend-y: .2cqw; }
+    .figure-body .physical-fairy { --legend-w: 2.3cqw; --legend-h: 3.2cqw; --legend-y: .2cqw; }
+    .figure-body .physical-count { --legend-w: 3.2cqw; --legend-h: 5cqw; --legend-y: .2cqw; }
     .figure-body .physical-gold { --legend-w: 3cqw; --legend-h: 3cqw; }
     .figure-body .physical-boat { --legend-w: 3cqw; --legend-h: 1.5cqw; }
-    .figure-body .physical-die { --legend-w: 3.4cqw; --legend-h: 3.4cqw; }
+    .figure-body .physical-die { --legend-w: 3.1cqw; --legend-h: 3.1cqw; }
+    .figure-body .physical-sheep { --legend-w: 2.2cqw; --legend-h: 1.7cqw; --legend-y: -.15cqw; }
+    .figure-body .physical-wolf { --legend-w: 2.35cqw; --legend-h: 1.65cqw; --legend-y: -.15cqw; }
 
     .figure-body .physical-tower { --legend-w: 4.533cqw; --legend-h: 2.667cqw; }
     .figure-body .physical-abbey { --legend-w: 3.333cqw; --legend-h: 3.333cqw; }
@@ -496,9 +504,9 @@
 
     .tile-effects {
       display: grid;
-      grid-template-columns: 1fr .85fr 1.08fr .84fr 1.28fr .68fr;
+      grid-template-columns: 1fr .85fr 1.08fr .84fr 1.28fr .96fr .68fr;
       gap: .18cqw;
-      height: 7.85cqw;
+      height: 8.8cqw;
       padding: .08cqw 0;
     }
     .tile-effect {
@@ -507,8 +515,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: .12cqw;
-      padding: .18cqw .22cqw;
+      gap: .05cqw;
+      padding: .1cqw .18cqw;
       text-align: center;
       font-size: var(--type-note);
       line-height: 1.02;
@@ -518,12 +526,18 @@
     .tile-effect strong { font-size: var(--type-title); }
     .tile-effect small { display: block; font-size: var(--type-note); line-height: 1; }
     .tile-effect strong small { display: inline; font-size: var(--type-note); }
-    .tile-effect .piece { width: 2.55cqw; height: 2.55cqw; }
+    .tile-effect .piece { width: 2.35cqw; height: 2.35cqw; }
     .tile-effect .pieces { height: 2.55cqw; }
     .tile-effect .pieces .piece { width: 2.45cqw; height: 2.55cqw; }
     .tile-effect.bridge-effect { font-size: var(--type-note); }
     .tile-effect.bridge-effect strong { font-size: var(--type-title); }
     .tile-effect.bridge-effect small { font-size: var(--type-note); }
+    .tile-effect.hill-effect {
+      flex-direction: column;
+      gap: .05cqw;
+      text-align: center;
+    }
+    .tile-effect.hill-effect .piece { width: 1.9cqw; height: 1.9cqw; color: #6b8b39; }
 
     .phase-dragon {
       height: 5cqw;
@@ -547,13 +561,13 @@
     .dragon-summary strong { font-size: var(--type-action); }
 
     .phase-two {
-      height: 28.2cqw;
-      padding: .72cqw 1.45cqw .35cqw;
+      height: 31.3cqw;
+      padding: .55cqw 1.45cqw .2cqw;
       background-color: var(--blue);
     }
     .phase-two h2 { color: #30678c; margin: 0; white-space: nowrap; }
     .phase-two-heading {
-      height: 2.65cqw;
+      height: 2.5cqw;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -573,7 +587,7 @@
     .city-protection-inline strong { font-size: var(--type-body); }
 
     .primary-choice-row {
-      height: 7.5cqw;
+      height: 7cqw;
       display: grid;
       grid-template-columns: 1.6fr 1.12fr .95fr 1.08fr 1.15fr;
       border-top: .13cqw solid rgba(104,71,42,.65);
@@ -661,9 +675,9 @@
     .transport-line small { display: block; font-size: var(--type-note); white-space: nowrap; }
 
     .secondary-choice-row {
-      height: 5.45cqw;
+      height: 5.1cqw;
       display: grid;
-      grid-template-columns: .85fr .95fr 1.12fr 1.72fr;
+      grid-template-columns: .72fr .78fr 1fr .92fr 1.58fr;
       border-bottom: .13cqw solid rgba(104,71,42,.65);
       background: rgba(255,255,255,.08);
     }
@@ -681,6 +695,9 @@
     .secondary-option:last-child { border-right: 0; }
     .secondary-option .piece { width: 3.25cqw; height: 3.45cqw; }
     .secondary-option .piece.wide { width: 4.15cqw; }
+    .secondary-option.shepherd-option { grid-template-columns: 3.35cqw 1fr; }
+    .secondary-option.shepherd-option .piece { width: 3.05cqw; height: 3.45cqw; }
+    .secondary-option.shepherd-option small { margin-top: .05cqw; line-height: .95; }
     .secondary-option.boat-option {
       grid-template-columns: 4cqw minmax(0, 1fr);
       padding-inline: .2cqw;
@@ -714,7 +731,7 @@
     .city-entry strong { font-size: var(--type-title); }
 
     .fairy-placement {
-      height: 3.25cqw;
+      height: 3cqw;
       display: flex;
       align-items: center;
       gap: .7cqw;
@@ -728,15 +745,15 @@
     .fairy-placement strong { font-size: var(--type-action); }
 
     .tower-panel {
-      height: 5.45cqw;
-      margin-top: .15cqw;
-      padding: .18cqw .3cqw;
+      height: 5cqw;
+      margin-top: .1cqw;
+      padding: .14cqw .3cqw;
       border: .14cqw solid #927027;
       background: rgba(239, 214, 139, .5);
       box-shadow: inset 0 0 .55cqw rgba(115,79,20,.1);
     }
     .tower-actions {
-      height: 4.8cqw;
+      height: 4.45cqw;
       display: grid;
       grid-template-columns: 1.13fr 1.45fr 1fr;
       gap: 0;
@@ -783,7 +800,7 @@
     .prisoner-note small { display: block; margin-top: .25cqw; font-size: var(--type-note); }
 
     .princess-warning {
-      height: 2.45cqw;
+      height: 2.3cqw;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -799,15 +816,39 @@
     }
     .princess-warning .piece { width: 2.35cqw; height: 2.35cqw; }
 
+    .flock-panel {
+      height: 4.9cqw;
+      display: grid;
+      grid-template-columns: 1.12fr 1fr 1.65fr;
+      border: .12cqw solid rgba(48,103,140,.52);
+      background: rgba(255,255,255,.26);
+    }
+    .flock-cell {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: .38cqw;
+      padding: .25cqw .42cqw;
+      border-right: .1cqw solid rgba(48,103,140,.3);
+      font-size: var(--type-note);
+      line-height: 1.02;
+    }
+    .flock-cell:last-child { border-right: 0; }
+    .flock-cell .pieces { width: 5.3cqw; height: 3.2cqw; gap: .05cqw; flex: 0 0 auto; }
+    .flock-cell .piece { width: 2.65cqw; height: 2.8cqw; }
+    .flock-cell .piece.shepherd { width: 2.5cqw; height: 3.2cqw; }
+    .flock-cell strong { display: block; font-size: var(--type-title); }
+    .flock-cell b { color: #285f82; }
+
     .phase-three {
-      height: 31.65cqw;
+      height: 33.55cqw;
       padding: .5cqw 1.45cqw .25cqw;
       background-color: var(--pink);
     }
     .phase-three h2 { color: #86332f; margin: 0 0 .2cqw; }
     .score-grid {
       display: grid;
-      grid-template-rows: 4.45cqw 4.5cqw repeat(4, 2.6cqw) 3cqw repeat(2, 2.6cqw);
+      grid-template-rows: 4.2cqw 4.2cqw repeat(4, 2.35cqw) 2.7cqw repeat(2, 2.35cqw) 4.4cqw;
       gap: .12cqw;
     }
     .score-item {
@@ -856,7 +897,7 @@
       display: flex;
       align-items: center;
       gap: .45cqw;
-      padding: .3cqw .45cqw;
+      padding: .22cqw .4cqw;
       border-right: .1cqw solid rgba(134,51,47,.28);
       line-height: 1.05;
     }
@@ -871,9 +912,30 @@
       height: 2.8cqw;
     }
     .score-item b { color: #7b302f; }
+    .score-item-hs {
+      display: grid;
+      grid-template-columns: 1.08fr 1.42fr;
+      gap: 0;
+      padding: 0;
+      white-space: normal;
+    }
+    .hs-score-cell {
+      min-width: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: .4cqw;
+      padding: .25cqw .45cqw;
+      border-right: .1cqw solid rgba(134,51,47,.28);
+      font-size: var(--type-note);
+      line-height: 1.02;
+    }
+    .hs-score-cell:last-child { border-right: 0; }
+    .hs-score-cell .piece { width: 2.8cqw; height: 2.8cqw; flex: 0 0 auto; }
+    .hs-score-cell strong { font-size: var(--type-title); }
     .phase-four {
-      height: 31.8cqw;
-      padding: .5cqw 1.45cqw .25cqw;
+      height: 26.8cqw;
+      padding: .35cqw 1.45cqw .15cqw;
       border-bottom: 0;
       background-color: transparent;
     }
@@ -881,11 +943,11 @@
     .after-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: .12cqw;
+      gap: .08cqw;
       align-items: stretch;
     }
     .after-item {
-      height: 2.86cqw;
+      height: 2.2cqw;
       min-height: 0;
       display: flex;
       align-items: center;
@@ -897,15 +959,15 @@
       line-height: 1;
       white-space: nowrap;
     }
-    .after-item .piece { width: 2.35cqw; height: 2.35cqw; flex: 0 0 auto; }
-    .after-item .pieces { width: 4.7cqw; height: 2.35cqw; gap: .04cqw; flex: 0 0 auto; }
-    .after-item .pieces .piece { width: 2.3cqw; height: 2.35cqw; }
+    .after-item .piece { width: 1.9cqw; height: 1.9cqw; flex: 0 0 auto; }
+    .after-item .pieces { width: 3.85cqw; height: 1.9cqw; gap: .04cqw; flex: 0 0 auto; }
+    .after-item .pieces .piece { width: 1.9cqw; height: 1.9cqw; }
     .after-item strong { display: inline; font-size: var(--type-title); }
     .after-item.king-record { grid-column: auto; }
 
     .bazaar-auction {
-      height: 4.65cqw;
-      margin-top: .15cqw;
+      height: 5.25cqw;
+      margin-top: .1cqw;
       display: grid;
       grid-template-columns: 1.05fr 1.35fr 1.7fr;
       border: .12cqw solid rgba(122,75,43,.55);
@@ -1550,6 +1612,38 @@
     "
 />
       </symbol>
+        <!-- Geometry embedded from assets/figure-special-9-sheperd.svg. -->
+        <symbol id="shepherd" viewBox="0 0 620 634">
+          <path fill="currentColor" d="M91 51Q80 58 80 73L104 523H257L272 493V472H368V493L387 523H523L497 433L476 391V327L522 295L539 274L524 253L405 236L384 119Q380 99 361 91H316Q292 96 286 118L265 226H223L184 59Q180 46 165 46Z"/>
+        </symbol>
+        <!-- Geometry embedded from assets/piece-neutral-9-sheep.svg. -->
+        <symbol id="sheep" viewBox="0 0 256 194">
+          <path fill="currentColor" d="M250.9 45 228.2 22.3c-4.6-4.6-10.9-7.2-17.4-7.2h-14.1c.1-2.3-.8-4.7-2.6-6.5-3.5-3.5-14.1-8.5-17.5-5-3.5 3.5 1.6 14.1 5 17.5.4.4.9.8 1.3 1.1L163 41.9H50.9C25.5 41.9 4.4 61 2.2 85.8c-.2 2.3 1.6 4.3 3.9 4.3h3.8v32.5L2 140.4v41.4l5.5 9.8h17.1l-9.3-12.9 4.1-23.3 21.3-24.2 9.1 50.8 5.4 9.6H73l-9.5-12.7-2.5-23.6 16.7-18.2c16.7 2 35.7 3.3 56.3 2.9l7.2 41.6 5.8 9.9h16.7l-8.9-12.9V139c3.4-.3 6.9-.6 10.3-1l7.5 43.6 5.8 9.9h16.7l-8.9-12.9v-47.2c28.3-25.4 33.2-68.3 33.2-68.3h23.8c3.9 0 7.5-2.1 9.4-5.6 2.4-4.1 1.6-9.2-1.7-12.5Z"/>
+        </symbol>
+        <!-- Geometry embedded from assets/piece-neutral-9-wolf.svg. -->
+        <symbol id="wolf" viewBox="0 0 256 177">
+          <path fill="currentColor" d="m168.337 116.926 13.771-8.763.009 54.647c6.523 0 11.811 5.288 11.811 11.811h-16.732c0-6.454-3.481-12.109-8.654-15.203l-.204-.12v-42.372ZM42.701 132.697l15.401 41.925h19.685c0-6.523-5.288-11.811-11.811-11.811l-6.89-29.669 28.34-20.534-13.96-1.726-30.765 21.815ZM249.881 28.937l-2.904.603L234.282 26l-3.937-7.874-27.559-3.937L187.038 2.379l-1.968 7.874 1.968 7.874-27.559 19.685L37.433 52.575l-23.54 24.667L2 128.425l25.281-32.847-9.533 32.843v30.453l3.937 15.748h21.653c0-6.526-5.285-11.811-11.811-11.811l.335-29.665 40.049-28.405 73.789 9.124v45.009l5.905 15.748h19.685c0-6.526-5.285-11.811-11.811-11.811v-47.244l43.307-27.559 6.377-24.196 5.434-6.316 23.622-1.968 3.937-5.905-5.467-1.094v-4.077s-2.184 2.024-3.595 3.358l-10.623-2.125 3.937-3.937 7.902 2.302 2.427-2.302h3.673v4.848l5.745-4.848h3.876l3.657-8.053c1.225-2.546-1-5.326-3.738-4.758Z"/>
+        </symbol>
+        <!-- Geometry embedded from assets/other-9-hill.svg. -->
+        <symbol id="hill" viewBox="0 0 512 512">
+          <path fill="currentColor" d="M247 55v203.248c-3.565-.103-7.126-.164-10.68-.154-62.774.18-123.48 17.837-170.16 55.783C47.754 328.767 31.464 346.787 18 368.157V494h208.92c43.583-100.15 136.274-151 230.414-151 2.962 0 5.926.056 8.89.156-1.515-1.36-3.045-2.705-4.59-4.035-53.44-45.953-125.055-74.07-196.634-79.884v-99.66c27.09-2.53 46.44-15.576 71-15.576 27.195 0 48 16 80 16V80c-32 0-48-16-80-16-28.854 0-44.703 13.005-71 15.563V55Zm210.334 306c-85.44 0-168.606 43.956-210.47 133H494V363.73c-12.176-1.816-24.436-2.73-36.666-2.73Z"/>
+        </symbol>
+        <!-- Geometry embedded from assets/other-9-vineyard.svg. -->
+        <symbol id="vineyard" viewBox="0 0 256 256">
+          <g fill="currentColor">
+            <path d="M95.8 128.4a17.2 17.2 0 1 1-34.4 0 17.2 17.2 0 0 1 34.4 0Z"/>
+            <path d="M134.1 128.4a17.2 17.2 0 1 1-34.4 0 17.2 17.2 0 0 1 34.4 0Z"/>
+            <path d="M172.8 128.4a17.2 17.2 0 1 1-34.4 0 17.2 17.2 0 0 1 34.4 0Z"/>
+            <path d="M212.1 128.4a17.2 17.2 0 1 1-34.4 0 17.2 17.2 0 0 1 34.4 0Z"/>
+            <path d="M114.5 162.9a17.2 17.2 0 1 1-34.4 0 17.2 17.2 0 0 1 34.4 0Z"/>
+            <path d="M153.2 162.9a17.2 17.2 0 1 1-34.4 0 17.2 17.2 0 0 1 34.4 0Z"/>
+            <path d="M153.2 231.7a17.2 17.2 0 1 1-34.4 0 17.2 17.2 0 0 1 34.4 0Z"/>
+            <path d="M133.8 197.3a17.2 17.2 0 1 1-34.4 0 17.2 17.2 0 0 1 34.4 0Z"/>
+            <path d="M172.6 197.3a17.2 17.2 0 1 1-34.4 0 17.2 17.2 0 0 1 34.4 0Z"/>
+            <path d="M192.5 162.8a17.2 17.2 0 1 1-34.4 0 17.2 17.2 0 0 1 34.4 0Z"/>
+            <path d="M63.5 107.1c17.1.6 33-18.8 33-18.8v-.4s4.9 6.2 15 7.9c0 0 8.1-15.4-1.9-27.6h22.3v42.8H143V39.5c0-11.6 9.4-21 21-21V7.4c-17.6 0-32.1 14.3-32.1 32.1V57h-15.2c9.4-7.9 8.6-21.2 8.6-21.2-9.8-2.8-16.9.6-16.9.6V36S102.2 11.6 86.6 5c-15 16.1-9.2 38.7-9.2 38.7-18-23.1-46.7 2.4-46.7 2.4s15 35.3 41.1 21.8c-.2 0-15.1 18.2-8.3 39.2Z"/>
+          </g>
+        </symbol>
         <!-- Geometry embedded from assets/other-2-good.svg. -->
         <symbol id="goods" viewBox="0 0 24 24">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5192 7.82274C2 8.77128 2 9.91549 2 12.2039V13.725C2 17.6258 2 19.5763 3.17157 20.7881C4.34315 22 6.22876 22 10 22H14C17.7712 22 19.6569 22 20.8284 20.7881C22 19.5763 22 17.6258 22 13.725V12.2039C22 9.91549 22 8.77128 21.4808 7.82274C20.9616 6.87421 20.0131 6.28551 18.116 5.10812L16.116 3.86687C14.1106 2.62229 13.1079 2 12 2C10.8921 2 9.88939 2.62229 7.88403 3.86687L5.88403 5.10813C3.98695 6.28551 3.0384 6.87421 2.5192 7.82274ZM12.75 11C12.75 10.5858 12.4142 10.25 12 10.25C11.5858 10.25 11.25 10.5858 11.25 11L11.25 13.25H9C8.58579 13.25 8.25 13.5858 8.25 14C8.25 14.4142 8.58579 14.75 9 14.75H11.25V17C11.25 17.4142 11.5858 17.75 12 17.75C12.4142 17.75 12.75 17.4142 12.75 17V14.75H15C15.4142 14.75 15.75 14.4142 15.75 14C15.75 13.5858 15.4142 13.25 15 13.25H12.75L12.75 11Z" fill="currentColor"/>
@@ -1616,10 +1710,11 @@
         <label><input type="checkbox" data-expansion-toggle="ic" checked><span>Inns &amp;<br>Cathedrals</span></label>
         <label><input type="checkbox" data-expansion-toggle="tb" checked><span>Traders &amp;<br>Builders</span></label>
         <label><input type="checkbox" data-expansion-toggle="pd" checked><span>Princess &amp;<br>Dragon</span></label>
-        <label><input type="checkbox" data-expansion-toggle="tower" checked><span>Tower</span></label>
+        <label><input type="checkbox" data-expansion-toggle="tower" checked><span>The<br>Tower</span></label>
         <label><input type="checkbox" data-expansion-toggle="am" checked><span>Abbey &amp;<br>Mayor</span></label>
         <label><input type="checkbox" data-expansion-toggle="ckr" checked><span>Count, King<br>&amp; Robber</span></label>
         <label><input type="checkbox" data-expansion-toggle="bcb" checked><span>Bridges, Castles<br>&amp; Bazaars</span></label>
+        <label><input type="checkbox" data-expansion-toggle="hs" checked><span>Hills &amp;<br>Sheep</span></label>
       </div>
       <div class="expansion-filter-bar mini-filters" role="group" aria-label="Mini expansions">
         <span class="filter-kind">Mini</span>
@@ -1651,6 +1746,7 @@
             <svg class="piece physical-robber red" data-expansion-target="robbers"><use href="#robber"/></svg>
             <svg class="piece physical-messenger red" data-expansion-target="messengers"><use href="#messenger"/></svg>
             <svg class="piece barn physical-barn red" data-expansion-target="am"><use href="#barn"/></svg>
+            <svg class="piece shepherd physical-shepherd red" data-expansion-target="hs"><use href="#shepherd"/></svg>
           </div>
           <div><strong>Special Figures (Not Meeple)</strong></div>
         </div>
@@ -1664,6 +1760,8 @@
             <svg class="piece gold physical-gold" data-expansion-target="gold"><use href="#gold"/></svg>
             <svg class="piece boat physical-boat" data-expansion-target="ferries"><use href="#boat"/></svg>
             <svg class="piece white physical-die" data-expansion-target="flying"><use href="#die"/></svg>
+            <svg class="piece sheep physical-sheep" data-expansion-target="hs"><use href="#sheep"/></svg>
+            <svg class="piece wolf physical-wolf" data-expansion-target="hs"><use href="#wolf"/></svg>
           </div>
           <div><strong>Neutral Pieces</strong></div>
         </div>
@@ -1703,18 +1801,19 @@
           <div class="tile-effect" data-expansion-target="gold"><svg class="piece micro gold"><use href="#gold"/></svg><span><strong>Place 2<br>Gold Ingots</strong><small>1 on new tile<br>1 on <b>ADJACENT</b> tile</small></span></div>
           <div class="tile-effect" data-expansion-target="magewitch"><span class="pieces"><svg class="piece micro purple" data-piece-toggle="mage"><use href="#mage-real"/></svg><svg class="piece micro orange" data-piece-toggle="witch"><use href="#witch-real"/></svg></span><span><strong>Place<br>Mage | Witch</strong><small>+1 per tile |<br>1/2 pts, round up</small></span></div>
           <div class="tile-effect" data-expansion-target="ckr"><svg class="piece shrine"><use href="#shrine"/></svg><span><strong>Shrine</strong><small>Only 1 Church/Shrine<br>may be ADJACENT</small></span></div>
-          <div class="tile-effect bridge-effect" data-expansion-target="bcb"><svg class="piece dark-brown"><use href="#bridge"/></svg><span><strong>Place Bridge</strong><small>1 on New or <b>ADJACENT</b> Tile;<br><b>ORTHOGONAL</b> on Field edges</small></span></div>
+          <div class="tile-effect bridge-effect" data-expansion-target="bcb"><svg class="piece dark-brown"><use href="#bridge"/></svg><span><strong>Place Bridge</strong><small>1 on New or <b>ADJACENT</b> Tile;<br><b>ORTHOGONAL</b> on Field edges<span data-expansion-target="hs"><br>Hill / Vineyard OK</span></small></span></div>
+          <div class="tile-effect hill-effect" data-expansion-target="hs" aria-label="Hill tile: tuck the next Land Tile facedown underneath and do not look. Place a Figure on a feature, not directly on the Hill. No Abbey underneath. New Land Tiles may have roads ending at houses and printed feature segments that remain separate unless a neighboring tile connects them."><svg class="piece hill"><use href="#hill"/></svg><span><strong>Hill Tile</strong><small>Tuck next Land Tile facedown underneath; do not look<br>Figure on Feature, not Hill; no Abbey</small></span></div>
           <div class="tile-effect" data-expansion-target="robbers"><svg class="piece micro red"><use href="#robber"/></svg><span><strong>Place<br>Robbers</strong></span></div>
         </div>
       </section>
 
       <section class="phase phase-dragon" data-expansion-target="pd">
         <h2>1b. Move the Dragon</h2>
-        <div class="dragon-summary"><svg class="piece dragon" data-piece-toggle="dragon"><use href="#dragon-real"/></svg><span><strong>Move UP TO 6 tiles orthogonally</strong> (no revisits); clockwise, active player starts.<br><b>Eats Player Figures except Barn or <span data-expansion-target="bcb">Castle Figure</span>; cannot enter Fairy tile.</b></span></div>
+        <div class="dragon-summary"><svg class="piece dragon" data-piece-toggle="dragon"><use href="#dragon-real"/></svg><span><strong>Move UP TO 6 tiles orthogonally</strong> (no revisits); clockwise, active player starts.<br><b>Eats Player Figures except Barn or <span data-expansion-target="bcb">Castle Figure</span>; cannot enter Fairy tile.</b> <span data-expansion-target="hs">Eating a Shepherd returns only that Shepherd and its flock.</span></span></div>
       </section>
 
       <section class="phase phase-two">
-        <div class="phase-two-heading"><h2>2. Place a Figure <span data-expansion-target="tower">or Tower Floor</span></h2><div class="city-protection-inline" data-expansion-target="ckr"><svg class="piece count"><use href="#city-carcassonne"/></svg><span><strong>City of Carcassonne:</strong> Cannot Fly/Transport into; Dragon/Fairy cannot enter; Tower cannot Capture; no Shepherd.</span></div></div>
+        <div class="phase-two-heading"><h2>2. Place a Figure <span data-expansion-target="tower">or Tower Floor</span></h2><div class="city-protection-inline" data-expansion-target="ckr"><svg class="piece count"><use href="#city-carcassonne"/></svg><span><strong>City of Carcassonne:</strong> Cannot Fly/Transport into; Dragon/Fairy cannot enter; Tower cannot Capture<span data-expansion-target="hs">; no Shepherd</span>.</span></div></div>
         <div class="primary-choice-row" aria-label="Meeple placement options">
           <div class="placement-option combined-meeple"><span class="placement-icons"><svg class="piece basic-meeple red"><use href="#meeple"/></svg><svg class="piece wide red" data-expansion-target="ic"><use href="#large-meeple"/></svg></span><strong>Meeple (+1)<span class="strength-note" data-expansion-target="ic">Large (+2)</span></strong><small>Road, City, Field<br>Church, <span data-expansion-target="ckr">Shrine</span><br><span data-expansion-target="am">Abbey</span>, <span data-expansion-target="tower">Tower</span></small></div>
           <div class="placement-option" data-expansion-target="abbot"><svg class="piece red"><use href="#abbot"/></svg><strong>Abbot<span class="strength-note">(Remove &amp; Score)</span></strong><small>Garden, Abbey<br>Church, Shrine</small></div>
@@ -1728,6 +1827,7 @@
         <div class="secondary-choice-row" aria-label="Special figure placement options">
           <div class="secondary-option" data-expansion-target="tb"><svg class="piece red"><use href="#builder"/></svg><span><strong>Builder</strong><small>Road, City<br>Remove if alone</small></span></div>
           <div class="secondary-option" data-expansion-target="tb"><svg class="piece wide red"><use href="#pig"/></svg><span><strong>Pig</strong><small>Field<br>Remove if alone</small></span></div>
+          <div class="secondary-option shepherd-option" data-expansion-target="hs"><svg class="piece shepherd red"><use href="#shepherd"/></svg><span><strong>Shepherd</strong><small>Field with no Shepherd<br>Draw: Sheep stays; Wolf returns both</small></span></div>
           <div class="secondary-option" data-expansion-target="am"><svg class="piece barn red"><use href="#barn"/></svg><span><strong>Barn</strong><small>4 Field Corners</small></span></div>
           <div class="secondary-option boat-option" data-expansion-target="ferries"><svg class="piece boat"><use href="#boat"/></svg><span class="boat-actions"><span><strong>OR Place a Boat</strong><small>with a Meeple</small></span><span><strong>Then ↷ Move a Boat</strong><small>if extending a Road</small></span></span></div>
         </div>
@@ -1740,6 +1840,11 @@
           </div>
         </div>
         <div class="fairy-placement" data-expansion-target="pd"><svg class="piece tile-symbol fairy"><use href="#fairy"/></svg><span><strong>Move the Fairy instead:</strong> if you don't Add/Move/Remove a <b>FIGURE</b>, assign Fairy to a Scoring Meeple<span data-expansion-target="bcb">, including one in a Castle</span>.</span></div>
+        <div class="flock-panel" data-expansion-target="hs" aria-label="Shepherd flock actions after extending a field">
+          <div class="flock-cell"><span class="pieces"><svg class="piece shepherd red"><use href="#shepherd"/></svg><svg class="piece sheep"><use href="#sheep"/></svg></span><span><strong>After extending your Shepherd's Field</strong>Finish the Figure action, then choose:</span></div>
+          <div class="flock-cell"><span class="pieces"><svg class="piece sheep"><use href="#sheep"/></svg><svg class="piece wolf"><use href="#wolf"/></svg></span><span><strong>Grow - Draw</strong>Sheep stays. Wolf: all sheep and all Shepherds in that Field return.</span></div>
+          <div class="flock-cell"><svg class="piece sheep"><use href="#sheep"/></svg><span><strong>Stable - Score Sheep Shown</strong>Every Shepherd owner in the Field scores the full total; return all sheep and the active Shepherd. <b>Enclosed Field: forced. Endgame: 0.</b></span></div>
+        </div>
       </section>
 
       <section class="phase phase-three">
@@ -1757,6 +1862,10 @@
           <div class="score-item" data-expansion-target="am"><svg class="piece barn red"><use href="#barn"/></svg><span><strong>Barn / Field</strong> — Barn Stays <span data-expansion-target="bcb">(Castle scored like cities, but +1)</span>. 3 per City; return figures. Later connection: 1 per City, and return figures. Endgame 4 per City.</span></div>
           <div class="score-item"><span class="pieces"><svg class="piece wide red" data-expansion-target="tb"><use href="#pig"/></svg><svg class="piece brown" data-expansion-target="river2"><use href="#pigsty"/></svg></span><span><strong><span data-expansion-target="tb">Pig</span> / <span data-expansion-target="river2">Pigsty</span></strong> — Both +1 per completed City. Bonuses stack. Barns do not get Pigsty bonus.</span></div>
           <div class="score-item" data-expansion-target="ckr"><svg class="piece shrine"><use href="#shrine"/></svg><span><strong>Shrine Challenge</strong> — First completed Feature scores <b>9</b>; loser scores <b>0</b>; return both Figures immediately. Same-tile finish: both 9. Unresolved at endgame: both score normally.</span></div>
+          <div class="score-item score-item-hs" data-expansion-target="hs" aria-label="Hill tie-breaking and Vineyard scoring rules">
+            <div class="hs-score-cell"><svg class="piece hill"><use href="#hill"/></svg><span><strong>Hill - Break a Majority Tie</strong><br>A tied player with a Figure on that Road/City/Field's Hill is the only scorer. No tie = no effect. Applies at endgame, including Farmers.</span></div>
+            <div class="hs-score-cell"><svg class="piece vineyard"><use href="#vineyard"/></svg><span><strong>Vineyard - Completed Church / Shrine / Abbey: +3 each ADJACENT</strong><br>No Figure on the Vineyard. May benefit multiple Features. No bonus when incomplete, for Gardens, or when removing an Abbot early; Shrine must win its Challenge.</span></div>
+          </div>
         </div>
       </section>
 
@@ -1773,9 +1882,9 @@
           <div class="after-item city-entry" data-expansion-target="ckr"><svg class="piece count"><use href="#count"/></svg><div><strong>City Entry</strong> — When <b>YOU</b> complete a Feature, if opponent(s) gain points and you gain none, additionally place max 1 eligible Meeple in a City District; then may move the Count.</div></div>
         </div>
         <div class="bazaar-auction" data-expansion-target="bcb" aria-label="Bazaar auction sequence">
-          <div class="bazaar-rule"><svg class="piece brown"><use href="#bazaar"/></svg><span><strong>Bazaar Auction - After the Turn</strong><br>No Figure on the Bazaar. Skip if fewer Land Tiles than Players; otherwise reveal 1 tile per Player.</span></div>
-          <div class="bazaar-rule"><span><strong>Choose and Bid:</strong> Player left of host chooses a tile and opens; clockwise bid higher or pass. Chooser buys it from the highest bidder or sells it to them. A solo bid goes to the bank; negative scores are allowed.</span></div>
-          <div class="bazaar-rule"><span><strong>Finish:</strong> Buyer exits; next eligible Player clockwise chooses; last tile is free. Starting with first buyer, play acquired tiles normally; a Bazaar cannot retrigger. Resume left of host. <span data-expansion-target="tb">Builder: auction before extra turn.</span> <span data-expansion-target="pd">Dragon: move immediately, then continue.</span></span></div>
+          <div class="bazaar-rule"><svg class="piece brown"><use href="#bazaar"/></svg><span><strong>Bazaar Auction - After the Turn</strong><br>No Figure. Skip if Land Tiles &lt; Players; otherwise reveal 1 tile per Player.</span></div>
+          <div class="bazaar-rule"><span><strong>Choose and Bid:</strong> Player left of host chooses; clockwise bid higher or pass. Chooser buys from the highest bidder or sells to them. Solo bid goes to bank; negative scores allowed.</span></div>
+          <div class="bazaar-rule"><span><strong>Finish:</strong> Buyer exits; next eligible Player clockwise chooses; last tile free. Play purchases from first buyer; no Bazaar retrigger. Resume left of host. <span data-expansion-target="tb">Builder: auction before extra turn.</span> <span data-expansion-target="pd">Dragon: move now.</span> <span data-expansion-target="hs">Hill: take its facedown tile only when played.</span></span></div>
         </div>
       </section>
     </section>
