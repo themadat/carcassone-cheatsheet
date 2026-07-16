@@ -1,0 +1,20 @@
+{
+  "id": "./",
+  "name": "Carcassonne Turn Sequence",
+  "short_name": "Carcassonne",
+  "description": "A compact Carcassonne turn sequence and expansion reference.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6ead2",
+  "theme_color": "#593719",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/!carcassonne-app-icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
